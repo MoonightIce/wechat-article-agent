@@ -1,0 +1,16 @@
+{
+  "name": "wechat-article-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first agent workspace for WeChat public account article planning and drafting.",
+  "scripts": {
+    "init": "node src/index.js init",
+    "score": "node src/index.js score",
+    "draft": "node src/index.js draft",
+    "check": "node src/index.js check"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

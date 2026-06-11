@@ -1,0 +1,10 @@
+{
+  "id": "sample-source",
+  "type": "project-note",
+  "title": "Local-first MVP decision",
+  "url": "",
+  "excerpt": "Content workflow should be verified locally before recurring automation moves to the cloud.",
+  "verificationStatus": "checked",
+  "copyrightRisk": "low",
+  "updatedAt": "2026-06-11T08:52:55.961Z"
+}

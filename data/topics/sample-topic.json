@@ -1,0 +1,21 @@
+{
+  "id": "sample-topic",
+  "title": "为什么公众号 Agent 应该先本地化开发",
+  "source": "Linear project: 公众号文章发布 Agent",
+  "audience": "正在搭建个人内容生产系统的开发者",
+  "coreClaim": "先把内容流程跑顺，再把稳定环节云端化。",
+  "status": "ready_to_write",
+  "scores": {
+    "audienceFit": 5,
+    "informationGain": 4,
+    "motivation": 5,
+    "sourceDepth": 3,
+    "timeliness": 3,
+    "conversionValue": 4,
+    "risk": 1
+  },
+  "sources": [
+    "sample-source"
+  ],
+  "updatedAt": "2026-06-11T08:52:55.959Z"
+}
