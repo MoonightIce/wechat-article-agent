@@ -9,6 +9,7 @@ const dataDirs = [
   "data/topics",
   "data/sources",
   "data/drafts",
+  "data/handoff",
   "data/publishing"
 ];
 
@@ -75,6 +76,53 @@ async function readSources() {
   return Promise.all(sourceFiles.map((file) => readJson(`data/sources/${file}`)));
 }
 
+async function readPublishingRecords() {
+  const publishingDir = path.join(root, "data/publishing");
+  const files = await readdir(publishingDir);
+  const recordFiles = files.filter((file) => file.endsWith(".json") && !file.startsWith("."));
+  return Promise.all(recordFiles.map((file) => readJson(`data/publishing/${file}`)));
+}
+
+async function readText(relativePath) {
+  return readFile(path.join(root, relativePath), "utf8");
+}
+
+function wechatHandoffTemplate(topic, draft) {
+  return `# WeChat Handoff: ${topic.title}
+
+Generated from: data/drafts/${topic.id}.md
+
+## Copy Package
+
+### Title
+
+${topic.title}
+
+### Abstract
+
+TODO: Copy the final abstract here after review.
+
+### Cover
+
+TODO: Use the Cover Direction and Image Plan from the draft.
+
+## WeChat Editor Body
+
+${draft}
+
+## Preview Checklist
+
+- [ ] Title and abstract are present.
+- [ ] Cover direction and image plan are present.
+- [ ] Image placeholders are uploaded or intentionally pending.
+- [ ] Links are readable and valid.
+- [ ] Paragraphs are short enough for mobile reading.
+- [ ] Headings render correctly in WeChat editor.
+- [ ] Source notes are reviewed before final publish.
+- [ ] Publishing gate remains present until human approval.
+`;
+}
+
 function getArgValue(name, fallback) {
   const index = process.argv.indexOf(`--${name}`);
   return index >= 0 ? process.argv[index + 1] : fallback;
@@ -110,6 +158,18 @@ async function run() {
     return;
   }
 
+  if (command === "format") {
+    await ensureProject();
+    const topicId = getArgValue("topic", "sample-topic");
+    const topic = await readJson(`data/topics/${topicId}.json`);
+    const draft = await readText(`data/drafts/${topicId}.md`);
+    const handoff = wechatHandoffTemplate(topic, draft);
+    const outputPath = `data/handoff/${topic.id}.wechat.md`;
+    await writeFile(path.join(root, outputPath), handoff, "utf8");
+    console.log(`WeChat handoff written to ${outputPath}`);
+    return;
+  }
+
   if (command === "sources") {
     await ensureProject();
     const sources = await readSources();
@@ -119,6 +179,21 @@ async function run() {
       title: source.title,
       verificationStatus: source.verificationStatus ?? "new",
       copyrightRisk: source.copyrightRisk ?? "unknown"
+    }));
+    console.log(JSON.stringify(summary, null, 2));
+    return;
+  }
+
+  if (command === "records") {
+    await ensureProject();
+    const records = await readPublishingRecords();
+    const summary = records.filter((record) => record.topicId).map((record) => ({
+      id: record.id ?? "unknown",
+      topicId: record.topicId ?? null,
+      status: record.status ?? "unknown",
+      finalTitle: record.finalTitle ?? null,
+      publishedUrl: record.publishedUrl ?? null,
+      metricsReady: Boolean(record.metrics && Object.values(record.metrics).some((value) => value !== null))
     }));
     console.log(JSON.stringify(summary, null, 2));
     return;

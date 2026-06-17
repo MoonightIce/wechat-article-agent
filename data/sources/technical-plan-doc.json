@@ -1,0 +1,19 @@
+{
+  "id": "technical-plan-doc",
+  "type": "project-log",
+  "title": "Technical Plan and MVP Shape",
+  "url": "docs/technical-plan.md",
+  "author": "Local project",
+  "excerpt": "Recommends local-first Node.js CLI, file-backed data, Git versioning, and human-approved publishing for MVP.",
+  "verificationStatus": "checked",
+  "copyrightRisk": "low",
+  "usage": {
+    "allowed": true,
+    "citationRequired": false,
+    "notes": "Use as technical decision source."
+  },
+  "relatedTopics": [
+    "article-agent-retrospective"
+  ],
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}

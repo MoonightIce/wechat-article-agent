@@ -1,0 +1,19 @@
+{
+  "id": "agent-workflow-doc",
+  "type": "project-log",
+  "title": "Agent Workflow: Topic to WeChat Publishing",
+  "url": "docs/agent-workflow.md",
+  "author": "Local project",
+  "excerpt": "Defines the end-to-end workflow from topic capture to publishing records and retrospectives.",
+  "verificationStatus": "checked",
+  "copyrightRisk": "low",
+  "usage": {
+    "allowed": true,
+    "citationRequired": false,
+    "notes": "Use as internal workflow source."
+  },
+  "relatedTopics": [
+    "article-agent-retrospective"
+  ],
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}

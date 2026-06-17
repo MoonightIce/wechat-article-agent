@@ -1,0 +1,22 @@
+{
+  "id": "topic-pool-tutorial",
+  "title": "如何为公众号 Agent 搭建一个可复盘的选题池",
+  "source": "Project docs: topic pool and scoring model",
+  "audience": "想把内容生产流程系统化的个人创作者和开发者",
+  "coreClaim": "选题池的价值不只是存想法，而是让选题、素材、评分、写作状态和复盘形成闭环。",
+  "articleType": "tutorial",
+  "status": "ready_to_write",
+  "scores": {
+    "audienceFit": 5,
+    "informationGain": 4,
+    "motivation": 4,
+    "sourceDepth": 4,
+    "timeliness": 3,
+    "conversionValue": 5,
+    "risk": 1
+  },
+  "sources": [
+    "topic-pool-doc"
+  ],
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}

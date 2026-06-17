@@ -1,0 +1,23 @@
+{
+  "id": "article-agent-retrospective",
+  "title": "搭建公众号文章 Agent 的第一轮复盘",
+  "source": "Local project workflow docs and Linear issue progress",
+  "audience": "正在从零搭建 AI Agent 工作流的开发者",
+  "coreClaim": "第一轮最重要的不是自动发布，而是把内容标准、审批闸门和可追溯记录先跑通。",
+  "articleType": "project-retrospective",
+  "status": "ready_to_write",
+  "scores": {
+    "audienceFit": 5,
+    "informationGain": 5,
+    "motivation": 5,
+    "sourceDepth": 4,
+    "timeliness": 4,
+    "conversionValue": 4,
+    "risk": 2
+  },
+  "sources": [
+    "agent-workflow-doc",
+    "technical-plan-doc"
+  ],
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}

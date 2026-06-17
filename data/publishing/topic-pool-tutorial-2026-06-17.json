@@ -1,0 +1,27 @@
+{
+  "id": "topic-pool-tutorial-2026-06-17",
+  "topicId": "topic-pool-tutorial",
+  "status": "draft",
+  "titleVersions": [
+    "如何为公众号 Agent 搭建一个可复盘的选题池"
+  ],
+  "finalTitle": null,
+  "draftPath": "data/drafts/topic-pool-tutorial.md",
+  "handoffPath": "data/handoff/topic-pool-tutorial.wechat.md",
+  "publishedUrl": null,
+  "publishedAt": null,
+  "publishMethod": "manual",
+  "metrics": {
+    "reads": null,
+    "likes": null,
+    "favorites": null,
+    "shares": null,
+    "comments": null
+  },
+  "retrospective": {
+    "whatWorked": [],
+    "whatDidNotWork": [],
+    "nextImprovements": []
+  },
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "sample-topic-2026-06-17",
+  "topicId": "sample-topic",
+  "status": "draft",
+  "titleVersions": [
+    "为什么公众号 Agent 应该先本地化开发"
+  ],
+  "finalTitle": null,
+  "draftPath": "data/drafts/sample-topic.md",
+  "handoffPath": "data/handoff/sample-topic.wechat.md",
+  "publishedUrl": null,
+  "publishedAt": null,
+  "publishMethod": "manual",
+  "metrics": {
+    "reads": null,
+    "likes": null,
+    "favorites": null,
+    "shares": null,
+    "comments": null
+  },
+  "retrospective": {
+    "whatWorked": [],
+    "whatDidNotWork": [],
+    "nextImprovements": []
+  },
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "article-agent-retrospective-2026-06-17",
+  "topicId": "article-agent-retrospective",
+  "status": "draft",
+  "titleVersions": [
+    "搭建公众号文章 Agent 的第一轮复盘"
+  ],
+  "finalTitle": null,
+  "draftPath": "data/drafts/article-agent-retrospective.md",
+  "handoffPath": "data/handoff/article-agent-retrospective.wechat.md",
+  "publishedUrl": null,
+  "publishedAt": null,
+  "publishMethod": "manual",
+  "metrics": {
+    "reads": null,
+    "likes": null,
+    "favorites": null,
+    "shares": null,
+    "comments": null
+  },
+  "retrospective": {
+    "whatWorked": [],
+    "whatDidNotWork": [],
+    "nextImprovements": []
+  },
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "topic-pool-doc",
+  "type": "project-log",
+  "title": "Topic Pool and Scoring Model",
+  "url": "docs/topic-pool.md",
+  "author": "Local project",
+  "excerpt": "Defines topic sources, topic schema, status flow, scoring dimensions, recommendation rules, and maintenance rhythm.",
+  "verificationStatus": "checked",
+  "copyrightRisk": "low",
+  "usage": {
+    "allowed": true,
+    "citationRequired": false,
+    "notes": "Use as internal workflow source."
+  },
+  "relatedTopics": [
+    "topic-pool-tutorial"
+  ],
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}
