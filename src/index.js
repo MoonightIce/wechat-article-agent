@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { scoreTopic } from "./topic-score.js";
@@ -61,6 +61,20 @@ async function readJson(relativePath) {
   return JSON.parse(content);
 }
 
+async function readTopics() {
+  const topicDir = path.join(root, "data/topics");
+  const files = await readdir(topicDir);
+  const topicFiles = files.filter((file) => file.endsWith(".json"));
+  return Promise.all(topicFiles.map((file) => readJson(`data/topics/${file}`)));
+}
+
+async function readSources() {
+  const sourceDir = path.join(root, "data/sources");
+  const files = await readdir(sourceDir);
+  const sourceFiles = files.filter((file) => file.endsWith(".json"));
+  return Promise.all(sourceFiles.map((file) => readJson(`data/sources/${file}`)));
+}
+
 function getArgValue(name, fallback) {
   const index = process.argv.indexOf(`--${name}`);
   return index >= 0 ? process.argv[index + 1] : fallback;
@@ -77,8 +91,11 @@ async function run() {
 
   if (command === "score") {
     await ensureProject();
-    const topic = await readJson("data/topics/sample-topic.json");
-    console.log(JSON.stringify(scoreTopic(topic), null, 2));
+    const topics = await readTopics();
+    const recommendations = topics
+      .map((topic) => scoreTopic(topic))
+      .sort((a, b) => b.normalizedScore - a.normalizedScore);
+    console.log(JSON.stringify(recommendations, null, 2));
     return;
   }
 
@@ -90,6 +107,20 @@ async function run() {
     const outputPath = `data/drafts/${topic.id}.md`;
     await writeFile(path.join(root, outputPath), draft, "utf8");
     console.log(`Draft scaffold written to ${outputPath}`);
+    return;
+  }
+
+  if (command === "sources") {
+    await ensureProject();
+    const sources = await readSources();
+    const summary = sources.map((source) => ({
+      id: source.id,
+      type: source.type,
+      title: source.title,
+      verificationStatus: source.verificationStatus ?? "new",
+      copyrightRisk: source.copyrightRisk ?? "unknown"
+    }));
+    console.log(JSON.stringify(summary, null, 2));
     return;
   }
 

@@ -1,0 +1,27 @@
+{
+  "positioning": "Practical notes about AI agents, product building, automation workflows, and personal operating systems for creators and developers.",
+  "targetReaders": [
+    "Developers experimenting with AI agents",
+    "Product managers building repeatable workflows",
+    "Independent creators improving content operations"
+  ],
+  "tone": [
+    "practical",
+    "honest",
+    "specific",
+    "calm"
+  ],
+  "preferredPhrases": [
+    "先跑通流程，再自动化",
+    "人工确认是产品能力的一部分",
+    "把隐性判断显性化",
+    "可追溯、可回滚、可复盘"
+  ],
+  "bannedPatterns": [
+    "彻底颠覆",
+    "唯一正确",
+    "闭眼自动发布",
+    "无需审核"
+  ],
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}

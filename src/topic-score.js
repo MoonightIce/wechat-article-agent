@@ -10,6 +10,8 @@ const defaultWeights = {
 
 export function scoreTopic(topic, weights = defaultWeights) {
   const scores = topic.scores ?? {};
+  const sourceDepth = Number(scores.sourceDepth ?? 0);
+  const risk = Number(scores.risk ?? 0);
   const weightedTotal = Object.entries(weights).reduce((total, [key, weight]) => {
     return total + (Number(scores[key] ?? 0) * weight);
   }, 0);
@@ -25,12 +27,13 @@ export function scoreTopic(topic, weights = defaultWeights) {
     title: topic.title,
     status: topic.status,
     normalizedScore,
-    recommendation: recommend(normalizedScore, scores.risk)
+    recommendation: recommend(normalizedScore, risk, sourceDepth)
   };
 }
 
-function recommend(score, risk = 0) {
+function recommend(score, risk = 0, sourceDepth = 0) {
   if (risk >= 4) return "review_risk_first";
+  if (sourceDepth <= 2 && score >= 55) return "collect_more_sources";
   if (score >= 75) return "write_next";
   if (score >= 55) return "collect_more_sources";
   return "backlog";

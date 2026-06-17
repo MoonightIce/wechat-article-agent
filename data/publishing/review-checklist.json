@@ -1,0 +1,32 @@
+{
+  "statuses": [
+    "draft",
+    "reviewing",
+    "needs_changes",
+    "approved",
+    "ready_to_publish",
+    "published",
+    "failed",
+    "rolled_back"
+  ],
+  "humanOnlyStatuses": [
+    "ready_to_publish",
+    "rolled_back"
+  ],
+  "requiredBeforeReadyToPublish": [
+    "Topic and reader fit are still valid.",
+    "Core claim is clear and supported.",
+    "Facts that may change over time are sourced.",
+    "Sensitive, compliance, or platform-policy claims are reviewed.",
+    "All source IDs used in the draft are listed.",
+    "Copyright-sensitive materials are reviewed.",
+    "Title, abstract, cover, and body are consistent.",
+    "Links and references are valid.",
+    "WeChat preview is readable on mobile.",
+    "No placeholder text remains.",
+    "Publishing account, method, and time are confirmed.",
+    "Human approval record exists."
+  ],
+  "defaultPublishMode": "manual_after_human_approval",
+  "updatedAt": "2026-06-17T00:00:00.000Z"
+}

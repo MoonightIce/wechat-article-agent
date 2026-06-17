@@ -8,6 +8,7 @@
     "init": "node src/index.js init",
     "score": "node src/index.js score",
     "draft": "node src/index.js draft",
+    "sources": "node src/index.js sources",
     "check": "node src/index.js check"
   },
   "engines": {

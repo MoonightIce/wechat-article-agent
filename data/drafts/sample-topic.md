@@ -5,6 +5,7 @@
 - Topic ID: sample-topic
 - Audience: 正在搭建个人内容生产系统的开发者
 - Source: Linear project: 公众号文章发布 Agent
+- Article Type: TODO: opinion | tutorial | project-retrospective | product-note | technical | checklist
 - Status: draft
 
 ## Core Claim
@@ -37,10 +38,36 @@ TODO: Write a short WeChat abstract.
 
 TODO: Describe cover image idea and required assets.
 
+- Concept: TODO
+- Main visual object: TODO
+- Source/license status: TODO
+- Cropping notes: keep key content in the center safe area
+
+## Image Plan
+
+- {{image:cover}}: TODO: cover image path, source, license status, review status.
+- {{image:workflow-diagram}}: TODO: optional diagram path, source, license status, review status.
+
+## Source Notes
+
+- sample-source: TODO: describe supported claims and verification status.
+
 ## Review Checklist
 
-- [ ] Core claim is clear and useful to the target reader.
-- [ ] Facts and references are traceable.
-- [ ] Sensitive claims and copyright risks are reviewed.
-- [ ] Title, abstract, cover idea, and body are consistent.
-- [ ] WeChat formatting is checked before final publishing.
+- [ ] Core claim is useful and specific to the target reader.
+- [ ] Audience and article type are explicit.
+- [ ] Structure includes problem, context, workflow/evidence, limitation, and takeaway.
+- [ ] Title and abstract match the actual article.
+- [ ] Facts that may change over time are sourced.
+- [ ] Sources and quotes are traceable.
+- [ ] Copyright-sensitive materials are reviewed.
+- [ ] Sensitive or high-risk claims are flagged for human approval.
+- [ ] Tone is practical, honest, specific, and calm.
+- [ ] WeChat readability is checked: short paragraphs, clear headings, and no layout-heavy dependency.
+- [ ] Final publishing remains blocked until a human approves title, cover, body, and publish action.
+
+## Publishing Gate
+
+- Status: draft
+- Final publish action: blocked until human approval
+- Required next state before publishing: ready_to_publish

@@ -1,0 +1,27 @@
+{
+  "topicId": "sample-topic",
+  "images": [
+    {
+      "id": "cover-local-first-v1",
+      "type": "cover",
+      "path": "assets/sample-topic/cover-local-first-v1.png",
+      "placeholder": "{{image:cover}}",
+      "source": "template-or-ai-generated",
+      "licenseStatus": "owned",
+      "reviewStatus": "needs_review",
+      "wechatMediaUrl": null,
+      "notes": "Show a local workflow board and keep title text in the center safe area."
+    },
+    {
+      "id": "diagram-workflow-v1",
+      "type": "diagram",
+      "path": "assets/sample-topic/diagram-workflow-v1.png",
+      "placeholder": "{{image:workflow-diagram}}",
+      "source": "original-diagram",
+      "licenseStatus": "owned",
+      "reviewStatus": "needs_review",
+      "wechatMediaUrl": null,
+      "notes": "Use in the workflow section after the core claim."
+    }
+  ]
+}
